@@ -1,0 +1,108 @@
+/* Global Styles */
+body {
+ font-family: 'Dancing Script', cursive;
+ margin: 0;
+ padding: 0;
+ background-color: #f4f4f4;
+ background-image: url('/static/images/wallpaperflare.com_wallpaper.jpg');
+ background-size: cover;
+ background-position: center;
+ color: #fff;
+ background-attachment: fixed; /* Ensures the image stays fixed during scrolling */
+}
+
+header {
+ background-color: #333;
+ color: #fff;
+ padding: 10px 0;
+ text-align: center;
+}
+
+header h1 {
+ margin: 0;
+ font-family: 'Pacifico', cursive; /* Changed to a cursive font */
+ color: #f0f8ff; /* Light color for better contrast */
+}
+
+nav {
+ margin: 10px 0;
+}
+
+nav a {
+ color: #fff;
+ text-decoration: none;
+ padding: 0 15px;
+}
+
+nav a:hover {
+ text-decoration: underline;
+}
+
+.container {
+ width: 90%;
+ margin: auto;
+ overflow: hidden;
+ position: relative;
+ z-index: 1; /* Ensures the container is above the background image */
+}
+
+section {
+ padding: 20px;
+ background: rgba(0, 0, 0, 0.3); /* Dark translucent background for better contrast */
+ backdrop-filter: blur(5px); /* Apply blur effect to the background */
+ color: #fff; /* Text color */
+ text-align: left; /* Align text to the right */
+ border-radius: 10px; /* Rounded corners for the section */
+ opacity: 0; /* Hide text initially */
+ transition: opacity 0.5s ease; /* Smooth transition for text visibility */
+ border: 1px  #fff; /* White border around the section */
+ margin: 20px 0; /* Margin to add space between sections */
+}
+
+/* Make text visible on hover */
+section:hover {
+ opacity: 1;
+}
+
+h2 {
+ color: #ff4500; /* Bright color for headers */
+ font-family: 'Dancing Script', cursive; /* Changed to a cursive font */
+}
+
+.gallery {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 10px;
+ justify-content: center;
+}
+
+.gallery img {
+ max-width: 100%;
+ height: auto;
+ border: 3px solid #ddd;
+ border-radius: 10px; /* Rounded corners for the images */
+ box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+ object-fit: cover;
+ width: 300px; /* Adjust the width as needed */
+ height: 200px; /* Adjust the height as needed */
+}
+
+footer {
+ background-color: #333;
+ color: #fff;
+ text-align: center;
+ padding: 10px 0;
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
