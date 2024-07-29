@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-h!9r275!q!t%la!9@((jx$z2k$d%o4!*i$o-vp0g9zwo@ze0o^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['myapp.onrender.com', 'localhost', '127.0.0.1']
+
+
 
 
 # Application definition
@@ -138,3 +140,12 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'  # Add this line
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+import django_heroku
+import dj_database_url
+import os
+
+# Update database configuration from $DATABASE_URL.
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
+# Enable Django-Heroku.
+django_heroku.settings(locals())
